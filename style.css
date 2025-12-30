@@ -1,0 +1,835 @@
+/* =====================================================
+   GLOBAL STYLE - Darsiti Gorden
+   ===================================================== */
+
+:root {
+  --primary: #c08457;
+  --dark: #2b2b2b;
+  --light: #f8f9fa;
+  --brown: rgba(111, 78, 55, 0.95);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #333;
+  padding-top: 0 !important;
+}
+
+/* =====================================================
+     NAVBAR (TRANSPARENT → SCROLL)
+     ===================================================== */
+
+.navbar {
+  background: transparent !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-custom {
+  background: transparent !important;
+}
+
+.navbar-custom.scrolled {
+  background: var(--brown) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  margin-left: 15px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffc107 !important;
+}
+
+/* underline hover */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ffc107;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* =====================================================
+     HERO SECTION
+     ===================================================== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.page-hero {
+  min-height: 45vh;
+  /* kecil & proporsional */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+/* =====================================================
+     CARD & PRODUCT
+     ===================================================== */
+
+.produk-card,
+.product-card {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.produk-card img,
+.product-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.produk-card:hover,
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+     ABOUT / TENTANG
+     ===================================================== */
+
+.tentang-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.detail-img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* =====================================================
+     KEUNGGULAN
+     ===================================================== */
+
+.keunggulan-box {
+  background: var(--light);
+  padding: 24px;
+  border-radius: 14px;
+  height: 100%;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.keunggulan-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.keunggulan-icon {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.keunggulan-box p {
+  margin-bottom: 0;
+  color: #333;
+}
+
+/* =====================================================
+     ORDER STEPS
+     ===================================================== */
+
+.order-step {
+  background: var(--light);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.order-step:hover {
+  transform: translateY(-5px);
+}
+
+.order-icon {
+  font-size: 40px;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* =====================================================
+     CUSTOM SECTION
+     ===================================================== */
+
+.custom-section {
+  background: url('images/gorden0.jpeg') no-repeat center center/cover;
+  height: 40vh;
+  position: relative;
+}
+
+.custom-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-content {
+  position: relative;
+  z-index: 2;
+}
+
+.animate-custom {
+  opacity: 0;
+  animation: fadeUpCustom 1s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUpCustom {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-btn {
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* =====================================================
+     GALLERY
+     ===================================================== */
+
+.galeri-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* =====================================================
+     SIDEBAR & FILTER
+     ===================================================== */
+
+.sidebar {
+  border-right: 1px solid #ddd;
+}
+
+.accordion-button {
+  font-weight: bold;
+}
+
+/* =====================================================
+     DETAIL PRODUCT
+     ===================================================== */
+
+.product-carousel img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.carousel-thumbs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.carousel-thumbs img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-thumbs img.active-thumb {
+  border-color: var(--primary);
+}
+
+/* =====================================================
+     CONTACT
+     ===================================================== */
+
+.contact-info {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.map-container {
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* =====================================================
+     FOOTER
+     ===================================================== */
+
+footer {
+  background: #5a3d2b;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.about-hero-img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.about-hero-img:hover {
+  transform: translateY(-6px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-hero-img {
+    max-width: 280px;
+  }
+}
+
+.portfolio-img {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ===================== PORTFOLIO DOWNLOAD ===================== */
+.portfolio-img {
+  max-width: 420px;
+  /* ukuran desktop */
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .portfolio-img {
+    max-width: 300px;
+  }
+}
+
+/* ================= VISI & MISI ================= */
+.visi-misi-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.visi-misi-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+.visi-misi-box ul {
+  padding-left: 18px;
+}
+
+.visi-misi-box ul li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* ================= GALERI ZOOM ================= */
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.zoomable:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.3s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= SIDEBAR KATEGORI ================= */
+
+.category-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.category-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c08457;
+  padding-bottom: 8px;
+}
+
+/* Accordion */
+.accordion-button {
+  font-weight: 600;
+  background: #f8f9fa;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #c08457;
+  color: #fff;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* Semua Produk */
+.all-product-btn {
+  background: #5a3d2b;
+  color: #fff;
+}
+
+.all-product-btn:hover {
+  background: #704c36;
+}
+
+/* List kategori */
+.category-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 6px;
+}
+
+.category-list a {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.25s ease;
+}
+
+.category-list a:hover {
+  background: #c08457;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.sidebar {
+  background: #ffffff;
+}
+
+.category-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.category-list li {
+  margin-bottom: 6px;
+}
+
+.category-list a {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #444;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.category-list a:hover {
+  background-color: #f5c542;
+  color: #000;
+  padding-left: 14px;
+}
+/* ================= SOLUSI SECTION ================= */
+
+.solusi-img {
+  max-width: 85%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* List solusi */
+.solusi-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .solusi-img {
+    max-width: 100%;
+    max-height: 240px;
+    margin-bottom: 20px;
+  }
+}
+/* ================= PAIN POINT SECTION ================= */
+
+.pain-box {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.pain-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.pain-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.pain-box p {
+  margin-bottom: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* ================= TRUST SECTION ================= */
+.trust-section {
+  background: #f8f9fa;
+}
+
+.trust-box {
+  background: #ffffff;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.trust-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.trust-number {
+  font-weight: 800;
+  color: #f4b400; /* warning */
+}
+
+.trust-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* ================= TESTIMONI ================= */
+.testi-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.testi-card:hover {
+  transform: translateY(-6px);
+}
+
+.testi-quote {
+  font-size: 60px;
+  color: #f4b400;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-family: serif;
+}
+
+.testi-text {
+  font-style: italic;
+  color: #555;
+  margin-top: 20px;
+}
+
+.testi-user {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.testi-user span {
+  display: block;
+  font-size: 14px;
+  color: #999;
+}
+.galeri-caption {
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+}
+.galeri-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.galeri-card:hover img {
+  transform: scale(1.05);
+}
+.carousel img {
+  height: 220px;
+  object-fit: cover;
+  cursor: zoom-in;
+  border-radius: 6px;
+}
+.product-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+.cta-section {
+  position: relative;
+  background: url('images/gorden/gordenn2.jpg') center / cover no-repeat;
+  color: #ffffff;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.cta-section h2,
+.cta-section p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+/* ===========================
+   FRAME KOTAK PRODUK (GLOBAL)
+   =========================== */
+
+   .product-card .carousel,
+   .product-card .carousel-inner,
+   .product-card .carousel-item {
+     aspect-ratio: 1 / 1;   /* kotak 1:1 */
+     width: 100%;
+   }
+   
+   /* Gambar menyesuaikan frame */
+   .product-card .carousel-item img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;     /* rapi, profesional */
+     border-radius: 6px;
+   }
+   
+   /* Supaya animasi halus */
+   .product-card {
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+   
+   .product-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+   }
+   .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  
+    width: 60px;
+    height: 60px;
+  
+    background-color: #25d366;
+    color: #fff;
+  
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 32px;
+    z-index: 9999;
+  
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    color: #fff;
+  }
+  .navbar-logo {
+    height: 35px;        /* aman untuk navbar */
+    width: auto;
+    object-fit: contain;
+  }
+  /* PAIN POINT SECTION */
+.pain-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 24px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.pain-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+
+.pain-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #fff3cd; /* kuning lembut */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.pain-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}

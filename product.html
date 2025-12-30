@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk | Darsiti Gorden</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="">Darsiti Gorden</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link active" href="product.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="page-hero d-flex align-items-center"
+    style="background: url('images/gorden/gordenn2.jpg') no-repeat center center / cover;">
+
+    <div class="about-overlay"></div>
+
+    <div class="container text-center text-white position-relative">
+      <h1 class="fw-bold">Product</h1>
+    </div>
+  </section>
+
+
+  <!-- CONTENT -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+
+        <aside class="col-md-3 sidebar">
+          <div class="category-box">
+            <h5 class="category-title">Kategori Produk</h5>
+
+            <div class="accordion" id="categoryAccordion">
+
+              <!-- Semua Produk -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button all-product-btn" type="button" onclick="filterCategory('all')">
+                    Semua Produk
+                  </button>
+                </h2>
+              </div>
+
+              <!-- GORDEN BLACKOUT -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseBlackout">
+                    Gorden Blackout
+                  </button>
+                </h2>
+                <div id="collapseBlackout" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul class="category-list">
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Canon')">Canon</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Chelsea One')">Chelsea One</a>
+                      </li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Oasis')">Oasis</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Woody')">Woody</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Audi')">Audi</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Spring')">Spring</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Melia')">Melia</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Fellas')">Fellas</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Alaska')">Alaska</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Dellana')">Dellana</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Einstein')">Einstein</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Coldy')">Coldy</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GORDEN LOKAL -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseLokal">
+                    Gorden Lokal
+                  </button>
+                </h2>
+                <div id="collapseLokal" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul class="category-list">
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Aliando')">Aliando</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Nikita')">Nikita</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Wajik')">Sido</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- AKSESORIS GORDEN -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseAksesoris">
+                    Aksesoris Gorden
+                  </button>
+                </h2>
+                <div id="collapseAksesoris" class="accordion-collapse collapse" data-bs-parent="#categoryAccordion">
+                  <div class="accordion-body">
+                    <ul class="category-list">
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Rel Gorden')">Rel Gorden</a></li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Rollet Gorden')">Rollet Gorden</a>
+                      </li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Tali Gorden')">Tali Gorden</a>
+                      </li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Hook Gorden')">Hook / Kait</a>
+                      </li>
+                      <li><a href="#" onclick="event.preventDefault(); filterCategory('Box Gorden')">Box Gorden</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </aside>
+
+
+        <!-- PRODUK LIST -->
+        <div class="col-md-9">
+          <div class="row g-4">
+
+            <!-- GORDEN 1 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Woody">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden1" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR (AUTO DARI JS / ATAU MANUAL) -->
+                  <div class="carousel-indicators"></div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/woodyy1.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy2.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy3.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy4.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy5.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy6.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy7.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy8.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy9.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/woodyy10.jpg" class="d-block w-100 zoomable"
+                        alt="Gorden Blackout Woody">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO PRODUK -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Woody</h5>
+                  <p class="text-muted small">
+                    Gorden blackout dengan motif kayu elegan, mampu meredam cahaya
+                    dan panas, cocok untuk kamar tidur & ruang keluarga.
+                  </p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Woody.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <!-- GORDEN 2 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Chelsea One">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden2" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden2" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden2" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/chelseaone1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/chelseaone2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Chelsea One</h5>
+                  <p class="text-muted small">Gorden blackout dengan motif modern minimalis, memberikan kesan rapi dan nyaman serta membantu mengurangi panas matahari.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Chealse%20One.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 3 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Spring">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden3" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden3" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden3" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/spring1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/spring2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden3"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden3"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Spring</h5>
+                  <p class="text-muted small">Gorden blackout bernuansa lembut dengan motif sederhana, cocok untuk menciptakan suasana hangat dan tenang di dalam ruangan.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Spring.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 4 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Coldy">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden4" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden4" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden4" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/coldy1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/coldy2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden4"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden4"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Coldy</h5>
+                  <p class="text-muted small">Gorden blackout dengan warna netral dan tampilan bersih, ideal untuk ruangan bergaya modern dan minimalis.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Coldy.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 5 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Melia">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden5" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden5" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden5" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/melia1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/melia2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden5"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden5"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Melia</h5>
+                  <p class="text-muted small">Gorden blackout dengan motif halus dan elegan, memberikan keseimbangan antara fungsi penahan cahaya dan estetika ruangan.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Melia.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 6 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Alaska">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden6" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden6" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden6" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/alaska1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/alaska2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden6"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden6"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Alaska</h5>
+                  <p class="text-muted small">Gorden blackout dengan tampilan polos modern, cocok untuk ruangan yang mengutamakan kesan luas dan terang.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Alaska.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 7 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Einstein">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden7" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden7" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden7" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/Einstein1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/Einstein2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden7"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden7"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Einstein</h5>
+                  <p class="text-muted small">Gorden blackout dengan desain unik dan berkarakter, memberikan sentuhan artistik sekaligus kenyamanan maksimal.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Einstein.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 8 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Delanna">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden8" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden8" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden8" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/Delanna1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/Delanna2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden8"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden8"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Delanna</h5>
+                  <p class="text-muted small">Gorden blackout bergaya modern dengan tampilan tegas, cocok untuk ruang keluarga dan ruang kerja.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Delanna.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 9 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Audi">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden9" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden9" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden9" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/audi1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/audi2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden9"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden9"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Audi</h5>
+                  <p class="text-muted small">Gorden blackout dengan motif lembut dan warna menenangkan, ideal untuk kamar tidur maupun ruang santai.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Audi.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 10 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Fellas">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden10" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden10" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden10" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/fellas1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/fellas2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden10"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden10"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Fellas</h5>
+                  <p class="text-muted small">Gorden blackout dengan motif simpel dan elegan, memberikan perlindungan cahaya optimal tanpa mengurangi estetika.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Fellas.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 11 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Oasis">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden11" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden11" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden11" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/oasis1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/oasis2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden11"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden11"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Oasis</h5>
+                  <p class="text-muted small">Gorden blackout dengan nuansa natural yang menenangkan, cocok untuk menciptakan suasana nyaman di rumah.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Oasis.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 12 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Canon">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden12" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden12" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden12" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Blackout/Canon1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/Canon2.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/gorden/Gorden Blackout/Canon3.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden12"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden12"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Blackout Canon</h5>
+                  <p class="text-muted small">Gorden blackout dengan variasi motif modern, memberikan kesan dinamis dan fungsional untuk berbagai ruangan.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Blackout%20Canon.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 13 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Wajik">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden13" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden13" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden13" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Lokal/wajik1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden13"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden13"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Lokal Sido</h5>
+                  <p class="text-muted small">Gorden lokal dengan motif wajik klasik, pilihan ekonomis dengan tampilan rapi dan fungsional untuk hunian sehari-hari.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Lokal%20Sido.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 14 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Aliando">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden14" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden14" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden14" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Lokal/aliando1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden14"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden14"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Lokal Aliando</h5>
+                  <p class="text-muted small">Gorden lokal dengan desain sederhana dan elegan, cocok untuk ruang tamu maupun kamar tidur.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Lokal%20Aliando.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- GORDEN 15 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Nikita">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselGorden15" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselGorden15" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselGorden15" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/Gorden Lokal/Nikita1.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGorden15"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselGorden15"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gorden Lokal Nikita</h5>
+                  <p class="text-muted small">Gorden lokal dengan motif minimalis, solusi praktis untuk mempercantik ruangan dengan budget terjangkau.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20gorden%20Gorden%20Lokal%20Nikita.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Aksesoris GORDEN 1 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Rollet Gorden">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselAksesorisGorden1" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAksesorisGorden1" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselAksesorisGorden1" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/aksesoris/acc1.jpeg" class="d-block w-100 zoomable" alt="aksesoris 1">
+                    </div>
+                    <div class="carousel-item active">
+                      <img src="images/gorden/aksesoris/acc2.jpg" class="d-block w-100 zoomable" alt="aksesoris 1">
+                    </div>
+                    <div class="carousel-item active">
+                      <img src="images/gorden/aksesoris/acc3.jpg" class="d-block w-100 zoomable" alt="aksesoris 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselAksesorisGorden1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselAksesorisGorden1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Rollet Gorden</h5>
+                  <p class="text-muted small">Alat untuk menggantung gorden, tersedia berbagai pilihan</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20Rollet%20Gorden.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Aksesoris GORDEN 2 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Rel Gorden">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselAksesorisGorden2" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAksesorisGorden2" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselAksesorisGorden2" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/aksesoris/acc4.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselAksesorisGorden2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselAksesorisGorden2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Rel Gorden</h5>
+                  <p class="text-muted small">Untuk menggantung gorden</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20Rel%20Gorden.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Aksesoris GORDEN 3 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Hook Gorden">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselAksesorisGorden3" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAksesorisGorden3" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselAksesorisGorden3" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/aksesoris/acc5.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselAksesorisGorden3"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselAksesorisGorden3"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Hook Gorden</h5>
+                  <p class="text-muted small">Digunakan untuk mengaitkan tali gorden, supaya gorden terlihat lebih rapi.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20Hook%20Gorden.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Aksesoris GORDEN 4 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Tali Gorden">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselAksesorisGorden3" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAksesorisGorden4" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselAksesorisGorden4" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/aksesoris/acc6.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselAksesorisGorden4"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselAksesorisGorden4"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tali Gorden</h5>
+                  <p class="text-muted small">Digunakan untuk mengikat gorden supaya bisa dibuka dan terlihat lebih rapi.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20tali%20gorden.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Aksesoris GORDEN 5 -->
+            <div class="col-md-4 mb-4 product-item" data-category="Box Gorden">
+
+              <div class="card h-100 shadow-sm product-card">
+
+                <!-- CAROUSEL -->
+                <div id="carouselAksesorisGorden3" class="carousel slide" data-bs-ride="false">
+
+                  <!-- INDICATOR DOT -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAksesorisGorden5" data-bs-slide-to="0"
+                      class="active"></button>
+                    <button type="button" data-bs-target="#carouselAksesorisGorden5" data-bs-slide-to="1"></button>
+                  </div>
+
+                  <!-- SLIDE -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/gorden/aksesoris/acc7.jpg" class="d-block w-100 zoomable" alt="Gorden Series 1">
+                    </div>
+                  </div>
+
+                  <!-- PANAH -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselAksesorisGorden5"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselAksesorisGorden5"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="card-body text-center">
+                  <h5 class="card-title">Box Gorden</h5>
+                  <p class="text-muted small">Digunakan untuk memasang gorden agar terlihat lebih rapi dan estetik.</p>
+
+                  <a href="https://wa.me/6281915118782?text=Halo,%20saya%20ingin%20pesan%20dan%20tanya%20tentang%20Box%20Gorden.%20Apakah%20masih%20tersedia%20dan%20bisa%20custom%20ukuran?"
+                    target="_blank" class="btn btn-outline-success w-100 mt-2">
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PRODUK LIST -->
+            <div class="col-md-9">
+
+              <!-- GRID PRODUK -->
+              <div class="row g-4" id="productGrid">
+                <!-- semua .product-item tetap di sini -->
+              </div>
+
+              <!-- PAGINATION -->
+              <nav class="mt-5 d-flex justify-content-center">
+                <ul class="pagination" id="pagination"></ul>
+              </nav>
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+    const itemsPerPage = 12;
+    let currentPage = 1;
+    let currentCategory = 'all';
+
+    function filterCategory(category) {
+      currentCategory = category;
+      currentPage = 1;
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const allProducts = document.querySelectorAll('.product-item');
+      const filtered = [];
+
+      allProducts.forEach(p => {
+        const cat = p.getAttribute('data-category');
+        if (currentCategory === 'all' || cat === currentCategory) {
+          filtered.push(p);
+          p.style.display = 'none';
+        } else {
+          p.style.display = 'none';
+        }
+      });
+
+      const totalPages = Math.ceil(filtered.length / itemsPerPage);
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+
+      filtered.slice(start, end).forEach(p => {
+        p.style.display = 'block';
+      });
+
+      renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+
+      if (totalPages <= 1) return;
+
+      for (let i = 1; i <= totalPages; i++) {
+        const li = document.createElement('li');
+        li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+        li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+        li.onclick = (e) => {
+          e.preventDefault();
+          currentPage = i;
+          renderProducts();
+        };
+        pagination.appendChild(li);
+      }
+    }
+
+    // INIT
+    renderProducts();
+  </script>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+        <p class="mb-0"> © 2025 Darsiti Gorden. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.querySelectorAll('.carousel').forEach((carousel) => {
+      const indicators = carousel.querySelector('.carousel-indicators');
+      const items = carousel.querySelectorAll('.carousel-item');
+
+      indicators.innerHTML = '';
+
+      items.forEach((item, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.setAttribute('data-bs-target', '#' + carousel.id);
+        button.setAttribute('data-bs-slide-to', index);
+
+        if (index === 0) button.classList.add('active');
+
+        indicators.appendChild(button);
+      });
+    });
+  </script>
+
+  <!-- MODAL ZOOM GAMBAR -->
+  <div class="modal fade" id="imageZoomModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <img id="zoomedImage" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.addEventListener('click', function (e) {
+        e.stopPropagation(); // hentikan event carousel
+        const modal = new bootstrap.Modal(
+          document.getElementById('imageZoomModal')
+        );
+        document.getElementById('zoomedImage').src = this.src;
+        modal.show();
+      });
+    });
+  </script>
+
+<script>
+  const navbar = document.querySelector('.navbar-custom');
+
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+      } else {
+          navbar.classList.remove('scrolled');
+      }
+  });
+</script>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/6281915118782" class="whatsapp-float" target="_blank" aria-label="Chat via WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</body>
+
+</html>
